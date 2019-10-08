@@ -5,7 +5,15 @@
 #      qat   -> atqay
 
 def pig_latin(word)
-
+	if 	word.start_with?(/[aoeiu]/)
+		word + "way"
+	elsif
+		word.start_with?("qu")
+		word.split("").rotate(2).join + "ay"	
+	else
+		n = word.index(/[aoeiu]/)
+  	word.split("")[n..-1].join + word.split("")[0...n].join + "ay"
+	end
 end
 
 ## Tests:
