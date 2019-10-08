@@ -12,7 +12,13 @@
 
 def pig_latin(word)
 
+  if word.start_with?("a", "e", "o", "u", "i")
+    word + "way"
+  else 
+    word[1..-1] + word.split("")[0] + "ay"
+  end
 end
+
 
 ## Tests:
 
